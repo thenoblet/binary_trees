@@ -24,6 +24,7 @@ typedef struct binary_tree_s
 /* Function prototypes */
 
 void binary_tree_print(const binary_tree_t *);
+int binary_tree_is_root(const binary_tree_t *node);
 
 
 #endif /* _BINARY_TREES_H_ */
