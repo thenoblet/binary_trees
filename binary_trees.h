@@ -39,10 +39,12 @@ size_t binary_tree_size(const binary_tree_t *tree);
 size_t binary_tree_leaves(const binary_tree_t *tree);
 size_t binary_tree_nodes(const binary_tree_t *tree);
 int binary_tree_balance(const binary_tree_t *tree);
+<<<<<<< HEAD
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second);
 
 
 /*Helper functions*/
-int is_ancestor(const binary_tree_t *ancestor, const binary_tree_t *node);
+int is_ancestor(const binary_tree_t *ancestor, const binary_tree_t *node)
+int binary_tree_is_full(const binary_tree_t *tree);
 
 #endif /* _BINARY_TREES_H_ */
