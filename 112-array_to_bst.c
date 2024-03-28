@@ -10,9 +10,6 @@
  * integers. It iterates through the array and inserts each unique element
  * into the BST.
  *
- * @array: A pointer to the array of integers.
- * @size: The number of elements in the array.
- *
  * Return: A pointer to the root node of the created BST if successful.
  * NULL upon failure (e.g., memory allocation failure or if @array is NULL).
  */
