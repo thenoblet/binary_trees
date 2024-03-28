@@ -34,15 +34,12 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	left_height = binary_tree_height(tree->left);
 	right_height = binary_tree_height(tree->right);
 
-	/* If heights are equal, continue checking for perfectness */
-	if (left_height == right_height)
-	{
-		/* Recursively check if left and right subtrees are perfect */
-		if (binary_tree_is_perfect(tree->left) &&
-		    binary_tree_is_perfect(tree->right))
-			return (1);
-	}
+	/* If heights are equal and left and right subtrees are perfect, return 1 */
+	if (left_height == right_height &&
+			binary_tree_is_perfect(tree->left) &&
+			binary_tree_is_perfect(tree->right))
+		return (1);
 
-	/* If heights are not equal or if subtrees are not perfect, return 0 */
+	/* Otherwise, return 0 */
 	return (0);
 }
