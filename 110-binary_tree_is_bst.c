@@ -47,7 +47,7 @@ int is_bst_util(const binary_tree_t *tree, int min, int max)
 
 	/*  Check if the current node's value is within the valid range */
 	if (tree->n < min || tree->n > max)
-		return (0)
+		return (0);
 	/**
 	 * Recursively check the left and right subtrees
 	 * Left subtree's max value is the current node's value - 1
