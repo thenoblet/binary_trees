@@ -24,6 +24,7 @@ typedef struct binary_tree_s
 } binary_tree_t;
 
 typedef struct binary_tree_s bst_t;
+typedef struct binary_tree_s avl_t;
 
 /* Function prototypes */
 void binary_tree_print(const binary_tree_t *);
@@ -58,8 +59,15 @@ bst_t *bst_search(const bst_t *tree, int value);
 bst_t *array_to_bst(int *array, size_t size);
 
 bst_t *bst_remove(bst_t *root, int value);
+int binary_tree_is_avl(const binary_tree_t *tree);
+size_t binary_tree_height(const binary_tree_t *tree);
+avl_t *r_insert_node(avl_t **tree, avl_t *parent, avl_t **new, int nval);
+avl_t *avl_insert(avl_t **tree, int value);
+
+
 /*Helper functions*/
 /* int is_ancestor(const binary_tree_t *ancestor, const binary_tree_t *node)*/
 int is_bst_util(const binary_tree_t *tree, int min, int max);
+int btia_helper(const binary_tree_t *tree, int min, int max);
 
 #endif /* _BINARY_TREES_H_ */
