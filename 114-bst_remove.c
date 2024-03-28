@@ -15,6 +15,8 @@
  */
 bst_t *bst_remove(bst_t *root, int value)
 {
+	bst_t *temp;
+
 	if (root == NULL)
 		return (NULL);
 
@@ -30,23 +32,23 @@ bst_t *bst_remove(bst_t *root, int value)
 	{
 		if (root->left == NULL)
 		{
-			bst_t *temp = root->right;
+			temp = root->right;
 			free(root);
 			return (temp);
 		}
 		else if (root->right == NULL)
 		{
-			bst_t *temp = root->left;
+			temp = root->left;
 			free(root);
 			return (temp);
 		}
 
-		bst_t *temp = root->right;
+		temp = root->right;
 		while (temp->left != NULL)
 			temp = temp->left;
 
-        	root->n = temp->n;root->right = bst_remove(root->right, temp->n);
-    }
-
-    return (root);
+		root->n = temp->n;
+		root->right = bst_remove(root->right, temp->n);
+	}
+	return (root);
 }
