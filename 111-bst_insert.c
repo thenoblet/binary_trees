@@ -14,7 +14,7 @@
  */
 bst_t *bst_insert(bst_t **tree, int value)
 {
-	bst_t *new_node, *current, *parent;
+	bst_t *new_node = NULL, *current = NULL, *parent = NULL;
 
 	if (tree == NULL)
 		return (NULL);
@@ -52,6 +52,7 @@ bst_t *bst_insert(bst_t **tree, int value)
 		parent->left = new_node;
 	else
 		parent->right = new_node;
+
 	new_node->parent = parent;
 	return (new_node);
 }
