@@ -51,12 +51,9 @@ binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
 binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
 int binary_tree_is_bst(const binary_tree_t *tree);
 int binary_tree_is_perfect(const binary_tree_t *tree);
-<<<<<<< HEAD
 bst_t *bst_insert(bst_t **tree, int value);
-=======
 binary_tree_t *binary_tree_sibling(binary_tree_t *node);
 binary_tree_t *binary_tree_uncle(binary_tree_t *node);
->>>>>>> c48c88ef5a3281e0d7158437e668f03028adfefc
 
 
 /*Helper functions*/
